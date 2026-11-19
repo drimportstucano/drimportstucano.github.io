@@ -35,13 +35,14 @@
 
   /* faixa rolando */
   .faixa{background:var(--gold);color:var(--black);overflow:hidden;height:44px;display:flex;align-items:center}
-  .faixa-trilho{display:flex;width:max-content;animation:rolar 32s linear infinite}
-  .faixa:hover .faixa-trilho{animation-play-state:paused}
+  .faixa-trilho{display:flex;width:max-content;animation:rolar 32s linear infinite;will-change:transform}
+  @media(hover:hover) and (pointer:fine){.faixa:hover .faixa-trilho{animation-play-state:paused}}
   .faixa-grupo{display:flex;align-items:center;flex:none}
   .faixa-grupo span{font-weight:600;font-size:1rem;white-space:nowrap;padding:0 22px}
   .faixa .st{width:14px;height:14px;flex:none}
   @keyframes rolar{to{transform:translateX(-50%)}}
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  @media(max-width:700px){.faixa-trilho{animation-duration:24s}.faixa{height:40px}.faixa-grupo span{font-size:.92rem;padding:0 16px}}
   @media(prefers-reduced-motion:reduce){.faixa-trilho{animation:none}}
 
   /* topo */
