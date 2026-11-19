@@ -63,7 +63,7 @@
   .bar nav a{text-decoration:none;color:#444}
   .bar nav a:hover{color:var(--black)}
   .bar .wa-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--black);color:var(--gold)}
-  @media(max-width:900px){.bar nav{display:none}}
+  @media(max-width:900px){.bar nav{display:none}.bar{justify-content:center}}
 
   /* hero */
   .hero{position:relative;color:var(--black);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;padding:36px 0 40px}
@@ -91,7 +91,8 @@
   .lk{display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:112px;padding:18px;border-radius:18px;background:var(--mist);text-decoration:none;border:1.5px solid transparent;transition:border-color .15s}
   .lk svg{width:24px;height:24px}
   .lk b{display:block;font-weight:600;font-size:1.02rem;line-height:1.25}
-  .lk small{display:block;color:var(--grey);font-size:.88rem;margin-top:2px}
+  .lk small{display:block;color:var(--grey);font-size:.88rem;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lk span{min-width:0}
   .lk:hover{border-color:var(--black)}
   .lk-main{background:var(--gold)}
   .lk-main small{color:#3d3000}
@@ -99,6 +100,7 @@
     .links{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
     .lk{min-height:104px;padding:16px}
   }
+  @media(max-width:380px){.lk{padding:14px 12px}.lk small{font-size:.76rem}}
 
   section{padding:64px 0 0}
   .sec-title{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:.5rem 2rem;margin-bottom:24px}
@@ -305,7 +307,6 @@
     <a href="#sobre">A loja</a>
     <a href="#contato">Contato</a>
   </nav>
-  <a class="wa-ic" href="https://wa.me/5575991794907?text=Ol%C3%A1%2C%20Dr%20Imports%21%20Vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg class="i"><use href="#wa"/></svg></a>
 </header>
 
 <main class="wrap">
@@ -322,7 +323,7 @@
     <a class="lk lk-main" href="https://wa.me/5575991794907?text=Ol%C3%A1%2C%20Dr%20Imports%21%20Vim%20pelo%20site." target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span><b>Loja</b><small class="tel">(75) 99179-4907</small></span></a>
     <a class="lk" href="https://wa.me/5575991751964?text=Ol%C3%A1%2C%20Rodrigo%21%20Vim%20pelo%20site%20da%20Dr%20Imports." target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span><b>Rodrigo</b><small class="tel">(75) 99175-1964</small></span></a>
     <a class="lk" href="https://wa.me/5575992400287?text=Ol%C3%A1%2C%20Danielle%21%20Vim%20pelo%20site%20da%20Dr%20Imports." target="_blank" rel="noopener"><svg><use href="#wa"/></svg><span><b>Danielle</b><small class="tel">(75) 99240-0287</small></span></a>
-    <button class="lk lk-btn" type="button" data-abrir="destaques" aria-haspopup="dialog"><svg><use href="#phone"/></svg><span><b>Aparelhos</b><small>Destaques e custo-benefício</small></span></button>
+    <button class="lk lk-btn" type="button" data-abrir="destaques" aria-haspopup="dialog"><svg><use href="#phone"/></svg><span><b>Aparelhos</b><small>Ver destaques</small></span></button>
   </nav>
 
   <section id="marcas">
